@@ -1,21 +1,23 @@
+import persona
+import datos_encomienda
 
-nombre = input("Ingrese Nombre: ")
-dni = input("Ingrese DNI: ")
-celular = input("Ingrese Celular: ")
+persona_envia = persona.ingreso()
+encomienda = datos_encomienda.ingreso()
+persona_recibe = persona.ingreso()
 
-persona_envia = {"nombre": nombre, "dni": dni, "celular": celular}
+#print("La persona %s con DNI %s está enviando %s a %s con DNI %s"
+    #%(persona_envia["nombre"], persona_envia["dni"], encomienda, persona_recibe["nombre"], persona_recibe["dni"]))
 
-nombre = input("Ingrese Nombre: ")
-dni = input("Ingrese DNI: ")
-celular = input("Ingrese Celular: ")
-
-persona_recibe = {"nombre": nombre, "dni": dni, "celular": celular}
+print("%s está enviando %s a %s"
+    %(persona.ver_datos(persona_envia["nombre"], persona_envia["dni"]),
+    encomienda,
+    persona.ver_datos(persona_recibe["nombre"], persona_recibe["dni"])))
 
 #registrar datos (100 lineas)
 
 #imprimir ticket (80 lineas)
-def imprimir(nombre, dni, destino, origen, costo):
-    print("Se entregó satisfactoriamente")
+#def imprimir(nombre, dni, destino, origen, costo):
+    # print("Se entregó satisfactoriamente")
 
 #cobrar ticket (250 lineas)
 
