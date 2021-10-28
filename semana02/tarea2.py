@@ -1,14 +1,27 @@
-entrada = input("Ingrese operación: ")
-operaciones = []
+import calculadora
 # 1. Idenfificar las operaciones
 # 2. Identificar los números ingresados.
 # 3. Realizar las operaciones sobre los números
 numeros = []
+operadores = ["+", "-", "*", "/"]
+prioridad1 = ["*", "/"]
+prioridad2 = ["+", "-"]
 
-def buscar_operacion(signo, funcion, prioridad):
-    if (entrada.__contains__(signo)):
-        operacion = {"operacion": funcion, "prioridad": prioridad}
-        operaciones.append(operacion)
+def leer(cadena):
+    numero = ""
+    for i in range(len(cadena)):
+        if is_int(cadena[i]):
+            numero += cadena[i]
+        elif cadena[i] in operadores:
+            operaciones.append(cadena[i])
+            numeros.append(int(numero))
+            numero = ""
+        else:
+            print("Error en cadena")
+            break
+        if i == len(cadena) - 1:
+            numeros.append(int(numero))
+
 
 def is_int(val):
     try:
@@ -17,24 +30,17 @@ def is_int(val):
     except:
         return False
 
-buscar_operacion("+", "suma", 2)
-buscar_operacion("-", "resta", 2)
-buscar_operacion("*", "producto", 1)
-buscar_operacion("/", "division", 1)
+def operar():
+    if operaciones[1] in prioridad1:
+        a = calculadora.operar(operaciones[1], numeros[1], numeros[2])
+        return calculadora.operar(operaciones[0], numeros[0], a)
+    else:
+        a = calculadora.operar(operaciones[0], numeros[0], numeros[1])
+        return calculadora.operar(operaciones[1], a, numeros[2])    
 
-for oper in operaciones:
-    print(oper)
-    if (oper["prioridad"] == 1):
-        if (oper["operacion"] == "producto"):
-            print("Hay producto")
-            valores = entrada.split("*")
-            for v in valores:
-                if is_int(v):
-                    numeros.append(v)
-                else:
-                    valores = entrada.split("*")
-                    for vl in valores:
-                        numeros.append(vl)
-
-
+entrada = input("Ingrese operación: ")
+operaciones = []
+leer(entrada)
+print(operaciones)
 print(numeros)
+print("El resultado de la operación es {}".format(operar()))
