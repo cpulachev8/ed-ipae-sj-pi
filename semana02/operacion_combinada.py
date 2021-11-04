@@ -1,11 +1,11 @@
 import calculadora
-# 1. Idenfificar las operaciones
-# 2. Identificar los números ingresados.
-# 3. Realizar las operaciones sobre los números
+# 1. Leer la cadena
+# 2. Idenfificar las operaciones
+# 3. Identificar los números ingresados.
+# 4. Realizar las operaciones sobre los números
 numeros = []
 operadores = ["+", "-", "*", "/"]
 prioridad1 = ["*", "/"]
-prioridad2 = ["+", "-"]
 
 def leer(cadena):
     numero = ""
@@ -32,12 +32,23 @@ def is_int(val):
 
 def operar():
     if operaciones[1] in prioridad1:
-        a = calculadora.operar(operaciones[1], numeros[1], numeros[2])
-        return calculadora.operar(operaciones[0], numeros[0], a)
+        a = operar_calculadora(operaciones[1], numeros[1], numeros[2])
+        return operar_calculadora(operaciones[0], numeros[0], a)
     else:
-        a = calculadora.operar(operaciones[0], numeros[0], numeros[1])
-        return calculadora.operar(operaciones[1], a, numeros[2])    
+        a = operar_calculadora(operaciones[0], numeros[0], numeros[1])
+        return operar_calculadora(operaciones[1], a, numeros[2])  
 
+def operar_calculadora(signo, a, b):
+    if signo == "+":
+        return calculadora.sumar(a, b)
+    elif signo == "-":
+        return calculadora.restar(a,b)
+    elif signo == "*":
+        return calculadora.multiplicar(a,b)
+    elif signo == "/":
+        return calculadora.dividir(a,b)  
+
+# Bloque principal
 entrada = input("Ingrese operación: ")
 operaciones = []
 leer(entrada)

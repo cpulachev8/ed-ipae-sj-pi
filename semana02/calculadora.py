@@ -12,19 +12,8 @@ def multiplicar(a, b):
 def dividir(a, b):
     return a / b
 
-def operar(signo, a, b):
-    if signo == "+":
-        return sumar(a, b)
-    elif signo == "-":
-        return restar(a,b)
-    elif signo == "*":
-        return multiplicar(a,b)
-    elif signo == "/":
-        return dividir(a,b)
-
-
 def potencia(a, b):
-    return pow(5, 2)
+    return pow(a, b)
 
 def fib(n):
     a, b, c = 0, 1, 0
