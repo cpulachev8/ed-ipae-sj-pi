@@ -15,21 +15,37 @@ def encriptar(val):
     # print("No se logró encriptar")
 
 ########################################
-lista = [1,2,3]
+""" lista = [1,2,3]
 if len(lista) > 0 :
-    print("Función pop de lista", lista.pop())
+    print("Función pop de lista", lista.pop()) """
 
 
 ###### Excepción 1 #################
-try:
+""" try:
     num = int(input("Ingrese un número: "))
-    print("{} / {} = {}".format(num, 10, num/0))
+    print("{} / {} = {}".format(num, 10, num/10))
     lista = [1, 2, 3, 4]
-    print("Elemento 5: ", lista[5])
+    print("Elemento 5: ", lista[1])
     # print(str(num) + " / 10 " + " = " + str(num/10))
 except IndexError:
     print("Índice no encontrado")
 except ValueError:
     print("Error al ingresar el número")
+except ZeroDivisionError:
+    print("No se puede dividir entre 0")
 except:
     print("Ocurrió un error inesperado")
+else:
+    print("Se finalizó con éxito") """
+
+########## Excepción 2 ############
+while True:
+    try:
+        numero = float(input("Ingrese número: "))
+    except:
+        print("Valor ingresado es incorrecto")
+    else:
+        print("No se presentó la excepción")
+        break
+    finally:
+        print("Fin del programa")
