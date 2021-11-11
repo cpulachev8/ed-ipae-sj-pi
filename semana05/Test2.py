@@ -22,3 +22,5 @@ print("El {} {} ".format(perro.nombre, perro.desplazamiento()))
 print("El {} {} ".format(gato.nombre, gato.desplazamiento()))
 print("La {} {} ".format(boa.nombre, boa.desplazamiento()))
 print("La {} {} ".format(aguila.nombre, aguila.desplazamiento()))
+
+# Crear una lista con 5 animales y de los animales ingresados hagan andar al primero y al último de la lista
