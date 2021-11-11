@@ -1,0 +1,24 @@
+# Ejemplo de clase animal
+class Animal:
+
+    def __init__(self) -> None:
+        self.nombre = input("Ingrese nombre: ")
+        self.grupo = input("Grupo: ")
+
+    def desplazamiento(self) :
+        if (self.grupo == 'Ave'):
+            return "Se desplaza volando"
+        elif self.grupo == 'Serpiente':
+            return "Se desplaza arrastrando"
+        else:
+            return "Se deplaza caminando"
+
+perro = Animal()
+gato = Animal()
+boa = Animal()
+aguila = Animal()
+
+print("El {} {} ".format(perro.nombre, perro.desplazamiento()))
+print("El {} {} ".format(gato.nombre, gato.desplazamiento()))
+print("La {} {} ".format(boa.nombre, boa.desplazamiento()))
+print("La {} {} ".format(aguila.nombre, aguila.desplazamiento()))

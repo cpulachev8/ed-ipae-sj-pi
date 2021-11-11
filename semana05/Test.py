@@ -11,16 +11,14 @@ class Persona:
 
 # Es una clase con un método de inicialización que permite iniciar atributos con valores diferentes
 class Vehiculo:
-
     nro_ruedas = 4    
 
-    def __init__(self, marca, anio_fabricacion):
-        self.marca = marca
-        self.anio_fabricacion = anio_fabricacion
+    def __init__(carro, marca, anio_fabricacion):
+        carro.marca = marca
+        carro.anio_fabricacion = anio_fabricacion
     
     def mostrar_datos(self):
         print("Es un vehículo de la marca {}, con año de fabricación {}, número de ruedas {}".format(self.marca, self.anio_fabricacion, self.nro_ruedas))
-
 
 # Crear un objeto de la clase persona - instanciar
 pedro = "Es un persona"
