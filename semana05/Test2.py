@@ -13,14 +13,20 @@ class Animal:
         else:
             return "Se deplaza caminando"
 
-perro = Animal()
-gato = Animal()
-boa = Animal()
-aguila = Animal()
+# perro = Animal()
+# gato = Animal()
+# boa = Animal()
+# aguila = Animal()
 
-print("El {} {} ".format(perro.nombre, perro.desplazamiento()))
-print("El {} {} ".format(gato.nombre, gato.desplazamiento()))
-print("La {} {} ".format(boa.nombre, boa.desplazamiento()))
-print("La {} {} ".format(aguila.nombre, aguila.desplazamiento()))
+# print("El {} {} ".format(perro.nombre, perro.desplazamiento()))
+# print("El {} {} ".format(gato.nombre, gato.desplazamiento()))
+# print("La {} {} ".format(boa.nombre, boa.desplazamiento()))
+# print("La {} {} ".format(aguila.nombre, aguila.desplazamiento()))
 
 # Crear una lista con 5 animales y de los animales ingresados hagan andar al primero y al último de la lista
+animales = []
+for i in range(3):
+    animales.append(Animal())
+
+print("El primer animal: ", animales[0].desplazamiento())
+print("El último animal: ", animales[len(animales) - 1].desplazamiento())
