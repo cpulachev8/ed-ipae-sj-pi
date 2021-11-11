@@ -10,14 +10,16 @@ class Persona:
     sexo = "Masculino"
 
 # Es una clase con un método de inicialización que permite iniciar atributos con valores diferentes
-class Vehiculo:    
+class Vehiculo:
+
+    nro_ruedas = 4    
 
     def __init__(self, marca, anio_fabricacion):
         self.marca = marca
         self.anio_fabricacion = anio_fabricacion
     
     def mostrar_datos(self):
-        print("Es un vehículo de la marca {}, con año de fabricación {}".format(self.marca, self.anio_fabricacion))
+        print("Es un vehículo de la marca {}, con año de fabricación {}, número de ruedas {}".format(self.marca, self.anio_fabricacion, self.nro_ruedas))
 
 
 # Crear un objeto de la clase persona - instanciar
@@ -30,7 +32,14 @@ print("Nombre: {}, edad: {}, sexo: {}".format(juan.nombre, juan.edad, juan.sexo)
 # Creación de 2 objetos de la clase vehículo
 veh1 = Vehiculo("Toyota", 2010)
 veh2 = Vehiculo("Kia", 2019)
+veh3 = Vehiculo("Honda", 2020)
+marca = input("Ingrese Marca del vehículo: ")
+anio_fab = input("Ingrese Año de fabricación del vehículo: ")
+veh4 = Vehiculo(marca, anio_fab)
+veh4.nro_ruedas = 2
 
 # Se está invocando el método mostrar_datos() de los vehículos creados
 veh1.mostrar_datos()
 veh2.mostrar_datos()
+veh3.mostrar_datos()
+veh4.mostrar_datos()
