@@ -28,3 +28,25 @@
 # Pila.push("S/ 1")
 # print(Pila.lista)
 # print(Pila.pop())
+
+# Otra forma
+# monedas = Pila()
+# monedas.push("S/ 5.00")
+# monedas.push("S/ 1.00")
+# monedas.push("S/ 2.00")
+# monedas.push("S/ 2.00")
+# monedas.push("S/ 0.50")
+
+# print(monedas.pop())
+# print(monedas.pop())
+
+# print(monedas.items)
+
+from estructuras import Pila
+
+monedas = Pila.Pila()
+monedas.push("5")
+monedas.push("3")
+monedas.push("2")
+
+print(monedas.items)
