@@ -15,6 +15,7 @@ for sala in salas:
 # Ingreso de espectadores
 print("Primer espectador")
 esp1 = Espectador()
+# (Sala)(salas[0]).ingresar_espectador(esp1) 
 salas[0].ingresar_espectador(esp1)
 print("Segundo espectador")
 esp2 = Espectador()

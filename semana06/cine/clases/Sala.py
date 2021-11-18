@@ -19,9 +19,13 @@ class Sala:
         print("Aforo: ", self.aforo)
 
     def ingresar_espectador(self, espectador: Espectador) -> None:
-        self.espectadores.append(espectador)
+        if len(self.espectadores) < self.aforo :
+            self.espectadores.append(espectador)
+        else :
+            print("La sala está llena")
 
     def listar_espectadores(self) -> None:
         for esp in self.espectadores:
             print("La sala {} tiene {}:".format(self.nro_sala, len(self.espectadores)))
             esp.imprimir_datos()
+            # (Espectador)(esp).imprimir_datos()
