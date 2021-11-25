@@ -3,7 +3,7 @@ class Persona:
     def __init__(self) -> None:
         self.nombre = input("Ingrese nombre: ")
         self.edad = int(input("Ingrese edad: "))
-        self.estado_civil = input("Ingrese estado civil (S|C|V|D)")
+        self.estado_civil = input("Ingrese estado civil (S|C|V|D): ")
 
     def es_mayor_edad(self) -> bool:
         # if self.edad >= 18:
@@ -28,3 +28,8 @@ class Persona:
 
     # definir un método que indique si puede tramitar licencia de conducir
     # Una persona puede tramita una licencia si es mayor de edad o es casado y tiene 16 años
+    def apto_licencia_conducir(self) -> None:
+        if self.es_mayor_edad() or (self.edad == 16 and (self.estado_civil.upper() == 'C')):
+            print("Puede tramitar la licencia de conducir")
+        else:
+            print("No Puede tramitar la licencia de conducir")
