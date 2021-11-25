@@ -21,31 +21,41 @@
 
 
 # Operaciones bancarias
-from Banca import Cliente
-from Banca import Banco
+# from Banca import Cliente
+# from Banca import Banco
+
+# bco = Banco()
+# # bco.operaciones()
+
+# # cliente1 = Cliente()
+# cliente1 = bco.cliente1
+# cliente1.depositar()
+# cliente1.retirar()
+# cliente1.depositar()
+# print("El saldo del cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
+
+# # cliente2 = Cliente()
+# cliente2 = bco.cliente2
+# cliente2.depositar()
+# cliente2.retirar()
+# cliente2.depositar()
+# print("El saldo del cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+
+# # cliente3 = Cliente()
+# cliente3 = bco.cliente3
+# cliente3.depositar()
+# cliente3.retirar()
+# cliente3.depositar()
+# print("El saldo del cliente {} es {}".format(cliente3.nombre, cliente3.consultar_saldo()))
+
+# print("El monto total en el banco es: ", bco.depositos_totales())
+
+
+# Para descomentar en grupo ctrl + k + u
+
+# Solución 2 de banca
+from Banca2.Banco import Banco
+
 
 bco = Banco()
-# bco.operaciones()
-
-# cliente1 = Cliente()
-cliente1 = bco.cliente1
-cliente1.depositar(300)
-cliente1.retirar(150)
-cliente1.depositar(20)
-print("El saldo del cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
-
-# cliente2 = Cliente()
-cliente2 = bco.cliente2
-cliente2.depositar(300)
-cliente2.retirar(150)
-cliente2.depositar(20)
-print("El saldo del cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
-
-# cliente3 = Cliente()
-cliente3 = bco.cliente3
-cliente3.depositar(300)
-cliente3.retirar(150)
-cliente3.depositar(20)
-print("El saldo del cliente {} es {}".format(cliente3.nombre, cliente3.consultar_saldo()))
-
-print("El monto total en el banco es: ", bco.depositos_totales())
+print(bco.clientes)
