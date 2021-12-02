@@ -60,6 +60,11 @@ def transferir(emisor: Cliente, receptor: Cliente, monto: float):
     emisor.retirar(monto)
     receptor.depositar(monto)
 
+def imprimir(cliente1: Cliente, cliente2: Cliente):
+    print("Saldo de cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
+    print("Saldo de cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+
+
 print("Cliente # 1")
 cliente1 = Cliente()
 monto_depositar = float(input("Ingrese monto a depositar: "))
@@ -69,13 +74,10 @@ print("Cliente # 2")
 cliente2 = Cliente()
 monto_depositar = float(input("Ingrese monto a depositar: "))
 cliente2.depositar(monto_depositar)
-
-print("Saldo de cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
-print("Saldo de cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+imprimir(cliente1, cliente2)
 
 monto_transferir = float(input("Ingrese monto a transferir: "))
 transferir(cliente1, cliente2, monto_transferir)
 
-print("Saldo de cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
-print("Saldo de cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+imprimir(cliente1, cliente2)
 
