@@ -53,9 +53,29 @@
 
 # Para descomentar en grupo ctrl + k + u
 
-# Solución 2 de banca
-from Banca2.Banco import Banco
+# Solución 2 de banca: Transferir 
+from Banca2.Cliente import Cliente
 
+def transferir(emisor: Cliente, receptor: Cliente, monto: float):
+    emisor.retirar(monto)
+    receptor.depositar(monto)
 
-bco = Banco()
-print(bco.clientes)
+print("Cliente # 1")
+cliente1 = Cliente()
+monto_depositar = float(input("Ingrese monto a depositar: "))
+cliente1.depositar(monto_depositar)
+
+print("Cliente # 2")
+cliente2 = Cliente()
+monto_depositar = float(input("Ingrese monto a depositar: "))
+cliente2.depositar(monto_depositar)
+
+print("Saldo de cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
+print("Saldo de cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+
+monto_transferir = float(input("Ingrese monto a transferir: "))
+transferir(cliente1, cliente2, monto_transferir)
+
+print("Saldo de cliente {} es {}".format(cliente1.nombre, cliente1.consultar_saldo()))
+print("Saldo de cliente {} es {}".format(cliente2.nombre, cliente2.consultar_saldo()))
+
