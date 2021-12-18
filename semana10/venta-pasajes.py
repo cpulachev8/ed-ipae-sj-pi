@@ -6,8 +6,6 @@ from Pasajero import Pasajero
 file = open("pasajeros.txt", "w")
 file.close
 
-pasajeros = []
 for i in range(5):
     pasajero = Pasajero()
-    pasajeros.append(pasajero)
     pasajero.grabar()
