@@ -84,6 +84,9 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
