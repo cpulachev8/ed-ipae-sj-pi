@@ -14,7 +14,7 @@
    <string>Mi primer GUI</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="lbTitle">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -34,11 +34,11 @@
      <string>CURSO ESTRUCTURA DE DATOS</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pbStart">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>80</y>
+      <x>180</x>
+      <y>130</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -50,6 +50,39 @@
     </property>
     <property name="text">
      <string>Iniciar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Usuario:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leUser">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
    </widget>
   </widget>
