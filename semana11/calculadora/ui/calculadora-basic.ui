@@ -98,7 +98,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="pbRes">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -116,7 +116,7 @@
      <string>-</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="pbMult">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -134,7 +134,7 @@
      <string>*</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="pbDiv">
     <property name="geometry">
      <rect>
       <x>320</x>
