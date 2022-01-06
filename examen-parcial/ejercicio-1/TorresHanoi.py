@@ -14,7 +14,7 @@ class TorresHanoi:
 
     def enter_tower_one(self):
         for i in range(self.disk_number, 0, -1):
-            self.tower_one.items.append(i)
+            self.tower_one.push(i)
 
     def start_play(self) -> None:    
         while(not self.play_end()):

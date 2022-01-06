@@ -1,12 +1,15 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication
+import os
 
 def sumar():
     val1 = int(form_calculadora.sbOperator1.text())
     val2 = int(form_calculadora.sbOperator2.text())
     form_calculadora.lbResult.setText((str)(val1 + val2))
 
-Form, Window = uic.loadUiType("calculadora-basic.ui")
+ui_path = os.path.dirname(os.path.abspath(__file__))
+print(os.path.join(ui_path, "ui", "calculadora-basic.ui"))
+Form, Window = uic.loadUiType(os.path.join(ui_path, "ui", "calculadora-basic.ui"))
 
 app_calculadora = QApplication([])
 window_calculadora = Window()
