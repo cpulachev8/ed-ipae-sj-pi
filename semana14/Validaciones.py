@@ -9,7 +9,7 @@ def validarRUC(ruc:str) -> bool:
                 suma_mult += multiplicadores[idx] * int(ruc[idx])
             part_ent = suma_mult // 11
             calculo = 11 - (suma_mult - part_ent*11)
-            s_calculo = str(calculo)
+            s_calculo = str(calculo)[-1:] # faltó obtener el último dígito
             return s_calculo == ruc[10:11]
         return False
     return False
