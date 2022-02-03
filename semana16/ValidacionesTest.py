@@ -28,3 +28,11 @@ class OperacionesTest(unittest.TestCase):
  
 if __name__ == '__main__':
     unittest.main()
+
+# Comandos para calcular coverage
+# 1) Calcular coverage, se ejecuta luego de agregar un nuevo test o por primera vez cuando se realiza el primer cálculo de coverage
+# coverage run -m unittest EjerciciosTest.py
+# EjerciciosTest.py es la clase que contiene los unittest
+# 2) Visualizar el resultado de coverage
+# coverage report -m
+# Enlace para la documentación: https://coverage.readthedocs.io/en/6.3.1/
