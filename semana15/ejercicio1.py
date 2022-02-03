@@ -26,6 +26,6 @@ def es_potencia(n: int, b:int) -> bool:
         exponente += 1
     return False
 
-n = int(input("Ingrese n: "))
-b = int(input("Ingrese b: "))
-print(es_potencia(n, b))
+# n = int(input("Ingrese n: "))
+# b = int(input("Ingrese b: "))
+# print(es_potencia(n, b))
