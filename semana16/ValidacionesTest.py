@@ -21,6 +21,9 @@ class OperacionesTest(unittest.TestCase):
 
     def test_ruc_numeros_caracteres(self):
         self.assertEqual(Validaciones.validarRUC("203938"), False)
+
+    def test_ruc_primeros_caracteres(self):
+        self.assertEqual(Validaciones.validarRUC("30512333797"), False)
         
  
 if __name__ == '__main__':
