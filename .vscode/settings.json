@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./semana16",
+        "./examen-final",
         "-p",
         "*test.py"
     ],
